@@ -1,0 +1,250 @@
+@font-face {
+	font-family: 'FixedsysExcelsior301Regular';
+	src: url('./fonts/fsex300-webfont.eot');
+	src: url('./fonts/fsex300-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('./fonts/fsex300-webfont.woff') format('woff'),
+	     url('./fonts/fsex300-webfont.ttf') format('truetype'),
+	     url('./fonts/fsex300-webfont.svg#FixedsysExcelsior301Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	-webkit-font-smoothing:aliased;
+	font-smooth:never;
+}
+* {
+	box-sizing: border-box;
+}
+html, body {
+	height:100vh;
+	margin:0;
+	padding:0;
+}
+body {
+	font-family: 'Terminal', monospace, 'Red Hat Text', sans-serif;
+	font-weight:bold;
+	color:white;
+	font-size:16px;
+	background-color:#212021;
+	display:grid;
+	align-items: stretch;
+}
+h1 { text-align:center; }
+
+body.empty .chat {
+	color:rgba(255,255,255,.1);
+	align-self:center;
+	text-align:center;
+}
+body.empty .chat span {
+	display:inline-block;
+	padding:1.5rem;
+	border-radius:1rem;
+	border:4px solid rgba(255,255,255,.05);
+}
+body.bottom .options .misc {
+	display:flex;
+	justify-content: space-between;
+}
+.filter form .options .misc label {
+	margin-top:1rem;
+}
+body.bottom .filter form .options .misc label {
+	display:block;
+}
+body.empty .filter .options {
+	visibility:hidden;
+}
+.chat {
+	overflow-y:scroll;
+	padding:.5rem .75rem;
+	scrollbar-width:thin;
+}
+.filter {
+	position:relative;
+	padding:.5rem 1.5rem;
+	font-family: -apple-system, system-ui, BlinkMacSystemFont,
+             'Segoe UI', Roboto, 'Helvetica Neue',
+             Ubuntu, Arial, sans-serif;
+	font-weight:normal;
+	background-color:#ccc;
+	color:rgba(0,0,0,.7);
+	border-left:3px solid #999;
+}
+.filter form { position:fixed; margin-right:1.5rem; }
+.upload-btn-wrapper {
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+	margin:.5rem auto .75rem;
+	text-align:center;
+}
+.btn {
+	border: 2px solid gray;
+	color: gray;
+	background-color: white;
+	padding: 6px 15px;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: bold;
+}
+.upload-btn-wrapper input[type=file] {
+	font-size: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+}
+.filter form label { display:block; }
+
+.chat div { display:flex; }
+.content {
+	flex: 1 1 auto;
+}
+.msg-to {
+	display:none;
+}
+.msg-from {
+	width:12ch;
+	min-width:12ch;
+	text-align:right;
+	vertical-align: top;
+	overflow-x:hidden;
+	white-space:nowrap;
+}
+.delimiter {
+	width:2ch;
+	min-width:2ch;
+}
+
+/****************************************************************/
+/*** Infantry-esque long line duplications when wrapping text ***/
+/****************************************************************/
+.mt0 .msg-from, .mt0 .msg-from + .delimiter {
+	overflow-y: hidden;
+	text-shadow: 0 1.105rem 0 #76f8f8,
+	             0 2.210rem 0 #76f8f8,
+				 0 3.320rem 0 #76f8f8,
+				 0 4.430rem 0 #76f8f8,
+				 0 5.540rem 0 #76f8f8,
+				 0 6.650rem 0 #76f8f8;
+}
+.mt2 .msg-from, .mt2 .msg-from + .delimiter {
+	overflow-y: hidden;
+	text-shadow: 0 1.105rem 0 #7ff21a,
+	             0 2.210rem 0 #7ff21a,
+				 0 3.320rem 0 #7ff21a,
+				 0 4.430rem 0 #7ff21a,
+				 0 5.540rem 0 #7ff21a,
+				 0 6.650rem 0 #7ff21a;
+}
+.mt3 .msg-from, .mt3 .msg-from + .delimiter {
+	overflow-y: hidden;
+	text-shadow: 0 1.105rem 0 #fdf731,
+	             0 2.210rem 0 #fdf731,
+				 0 3.320rem 0 #fdf731,
+				 0 4.430rem 0 #fdf731,
+				 0 5.540rem 0 #fdf731,
+				 0 6.650rem 0 #fdf731;
+}
+.mt4 .msg-from, .mt4 .msg-from + .delimiter {
+	overflow-y: hidden;
+	text-shadow: 0 1.105rem 0 #5ec8c7,
+	             0 2.210rem 0 #5ec8c7,
+				 0 3.320rem 0 #5ec8c7,
+				 0 4.430rem 0 #5ec8c7,
+				 0 5.540rem 0 #5ec8c7,
+				 0 6.650rem 0 #5ec8c7;
+}
+.mt6 .msg-from, .mt6 .msg-from + .delimiter {
+	overflow-y: hidden;
+	text-shadow: 0 1.105rem 0 #b5b220,
+	             0 2.210rem 0 #b5b220,
+				 0 3.320rem 0 #b5b220,
+				 0 4.430rem 0 #b5b220,
+				 0 5.540rem 0 #b5b220,
+				 0 6.650rem 0 #b5b220;
+}
+.mt7 .msg-from, .mt7 .msg-from + .delimiter {
+	overflow-y: hidden;
+	text-shadow: 0 1.105rem 0 #e55ffe,
+	             0 2.210rem 0 #e55ffe,
+				 0 3.320rem 0 #e55ffe,
+				 0 4.430rem 0 #e55ffe,
+				 0 5.540rem 0 #e55ffe,
+				 0 6.650rem 0 #e55ffe;
+}
+
+/*******************
+ Chat Message Types
+ ===================
+ 0 - Public chat
+ 1 - Macro (color defined by message text)
+ 2 - Private message
+ 3 - Internal team message
+ 4 - External team message
+ 5 - System message (message color indicated by first character in "message content" value)
+ 6 - Chat channel message
+ 7 - Squad message
+ 8 - System "killed" messages
+ 9 - Entering/Exiting message
+ *******************/
+
+.mt0 { color:#76f8f8; }
+.mt1 { /*color:;*/ }
+.mt2 { color:#7ff21a; }
+.mt2 .msg-to { display:none; }
+.mt3 { color:#fdf731; }
+.mt4 { color:#5ec8c7; }
+.mt4 .msg-to { display:none; }
+.mt5 { color:#7ff21a; /* default */ }
+.mt6 { color:#b5b220; }
+.mt6 .msg-to { display:none; }
+.mt7 { color:#e55ffe; }
+.mt8 { color:#e93f33; }
+.mt9 { /*color:;*/ }
+.hidden { display:none !important; }
+
+/*******************
+ Color Overrides
+ ===================
+ 0/~ - #68c811
+ 1/! - #e93f33
+ 2/@ - #c7342a
+ 3/# - #e55ffe
+ 4/$ - #c84cc6
+ 5/% - #244afc
+ 6/^ - #1838c6
+ 7/& - #ffffff
+ 8/* - #c6c7c6
+ *******************/
+
+.co0 { color:#68c811; }
+.co1 { color:#e93f33; }
+.co2 { color:#c7342a; }
+.co3 { color:#e55ffe; }
+.co4 { color:#c84cc6; }
+.co5 { color:#244afc; }
+.co6 { color:#1838c6; }
+.co7 { color:#ffffff; }
+.co8 { color:#c6c7c6; }
+
+
+/**********************
+ **** Grid Layouts ****
+***********************/
+body {
+	grid-template-columns: 1fr 250px;
+	grid-template-rows: 1fr 250px;
+	grid-template-areas: "chat filter"
+	                     "chat filter";
+}
+.chat   { grid-area: chat; }
+.filter { grid-area: filter; border-top:3px solid #999; border-left:0; }
+body.bottom {
+	grid-template-areas: "chat chat"
+	                     "filter filter";
+}
+body.bottom .filter h1 { font-size:16px; line-height:1; margin:.25rem 0 .75rem; }
+body.bottom .filter form label { display: inline-block; }
+body.bottom .half {
+	width:45%;
+}
