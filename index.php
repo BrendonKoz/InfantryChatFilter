@@ -47,7 +47,7 @@
 				$class[] = '{p}-'.$line[3];
 			}
 
-			$lines[] = '<div class="' . implode($class, ' ') . '"'.$title.'><span class="msg-to">'.$to.'</span>' . $from . '<span class="content">' . $content . '</span></div>';
+			$lines[] = '<div class="' . implode(' ', $class) . '"'.$title.'><span class="msg-to">'.$to.'</span>' . $from . '<span class="content">' . $content . '</span></div>';
 			$class = null;
 		}
 		$aliasList = array_keys($aliasList);
@@ -56,7 +56,7 @@
 		foreach ($aliasList as $player) {
 			$playerList[] = '<option value="'.$player.'">'.$player.'</option>';
 		}
-		$lines = implode($lines, '');
+		$lines = implode('', $lines);
 	} else {
 		$bodyClass = 'empty';
 	}
@@ -103,7 +103,7 @@
 					<div class="half">
 						<label for="players">Filter By Players</label>
 						<select class="" id="players" name="players">
-							<?= implode($playerList, "\n"); ?>
+							<?= implode("\n", $playerList); ?>
 						</select>
 					</div>
 					<div class="half">
